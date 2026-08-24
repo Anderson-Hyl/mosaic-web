@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mosaic — Many threads. One surface.</title>
+  <meta name="description" content="A native macOS spatial workspace. Agents, terminals, diffs, and notes stay on the canvas. Who is waiting is a click, not a tab hunt.">
+  <meta property="og:title" content="Mosaic">
+  <meta property="og:description" content="Many threads. One surface. Nothing lost.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-strands.jpg">
+  <meta name="theme-color" content="#15191F">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./">
+        <img src="assets/icon.png" width="28" height="28" alt="">
+        Mosaic
+      </a>
+      <span class="nav-meta">macOS 15</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="kicker">A spatial workspace for the afternoon that will not stay on one task</p>
+      <h1>Many threads.<br>One surface.</h1>
+      <p class="lede">
+        Tabs hide everything but one. Mosaic lays the work out so nothing
+        has to wait off-screen — session, diff, and notes on the same ground.
+      </p>
+      <div class="meta-row">
+        <span class="chip">Local-first</span>
+        <span class="chip">Native macOS</span>
+        <span class="chip">Private preview</span>
+      </div>
+      <figure class="shot">
+        <img src="assets/hero-strands.jpg" width="2000" height="1250" alt="Three workspaces on a Mosaic canvas: a refactor agent beside its diff, an upgrade session, and a focused test run.">
+        <figcaption>Give every session its own ground.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section wrap">
+      <div class="split">
+        <div class="copy">
+          <p class="kicker">The usual surface</p>
+          <h2>Three sessions.<br>One visible at a time.</h2>
+          <p>
+            The bell rings in a tab you are not looking at. Output scrolls
+            away. Switching is guessing which one was waiting, and for how long.
+          </p>
+        </div>
+        <figure class="shot">
+          <img src="assets/tabs-one.jpg" width="2000" height="1250" alt="A terminal tile running tmux: three sessions in a status bar, only one window visible, Upgrade flagged with a bell.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="split reverse">
+        <div class="copy">
+          <p class="kicker">Beside the question</p>
+          <h2>The agent edits.<br>The diff answers.</h2>
+          <p>
+            Diff, session, and notes live on the same strand. You do not hunt
+            scrollback for the thing that was already next to the prompt.
+          </p>
+        </div>
+        <figure class="shot">
+          <img src="assets/beside.jpg" width="2000" height="1250" alt="A Refactor workspace: Claude in a terminal tile, a live git diff beside it, a review note underneath.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="split">
+        <div class="copy">
+          <span class="waiting-pill"><span class="dot" aria-hidden="true"></span>2 waiting</span>
+          <h2>See who is waiting.</h2>
+          <p>
+            A bell you missed in another tab is a pill you can click. Jump to
+            the oldest ask. The count is every tile that needs you, not the
+            one currently in frame.
+          </p>
+          <div class="keys" aria-label="Shortcuts">
+            <kbd>⌥`</kbd>
+            <span class="nav-meta">next waiting</span>
+          </div>
+        </div>
+        <figure class="shot">
+          <img src="assets/waiting.jpg" width="2000" height="1250" alt="Mosaic chrome showing a 2 waiting pill while a meeting note sits on the canvas.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="split reverse">
+        <div class="copy">
+          <p class="kicker">Without leaving</p>
+          <h2>Look around.<br>Everything still runs.</h2>
+          <p>
+            Hold ⌥O to peek the whole room. Status stays readable when the
+            pixels recede. One done, one failed, seen without moving.
+          </p>
+          <div class="keys" aria-label="Shortcuts">
+            <kbd>⌥O</kbd>
+            <span class="nav-meta">peek the room</span>
+            <kbd>⌥Tab</kbd>
+            <span class="nav-meta">last tile</span>
+          </div>
+        </div>
+        <figure class="shot">
+          <img src="assets/glance.jpg" width="2000" height="1250" alt="Room overview: each tile reduced to an identity card, including a failed test marked exit 1.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="close wrap">
+      <h2>Nothing lost.</h2>
+      <p>
+        A native macOS workspace, not a browser tab. The app is local-first
+        and still in private preview — there is no public download yet.
+      </p>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>Mosaic</span>
+    <span>macOS 15 and later</span>
+  </footer>
+</body>
+</html>
