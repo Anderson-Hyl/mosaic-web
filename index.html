@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -45,11 +45,49 @@
           <span class="cta-note">macOS 15+ · Apple Silicon<br>签名并公证 Signed &amp; notarized</span>
         </div>
       </div>
-      <div class="hero-stage">
-        <img class="shot" src="assets/canvas-strands.png" width="960" height="560" alt="Mosaic 画布：Grok 终端、Git diff 和笔记在同一个工作区里。">
+      <div class="hero-stage" role="group" aria-label="Mosaic 画布与其中的 Terminal、Git tile">
+        <figure class="hero-shot hero-shot-terminal">
+          <img src="assets/tile-terminal.png" width="960" height="560" decoding="async" alt="Grok terminal tile：agent 通过 MCP 创建了 Git tile。">
+        </figure>
+        <figure class="hero-shot hero-shot-git">
+          <img src="assets/tile-git.png" width="1040" height="680" decoding="async" alt="Git tile：RoomStore.swift 的本地改动。">
+        </figure>
+        <figure class="hero-shot hero-shot-canvas">
+          <img src="assets/canvas-strands.png" width="960" height="560" fetchpriority="high" alt="Mosaic 画布：Grok 终端、Git diff 和笔记在同一个工作区里。">
+        </figure>
       </div>
     </div>
   </header>
+
+  <section class="section shots" aria-labelledby="shots-title">
+    <div class="wrap">
+      <div class="shots-copy">
+        <div class="eyebrow canvas">视距 · Three distances</div>
+        <h2 id="shots-title">需要多少上下文，就靠近多少</h2>
+        <p class="h2-en">Overview, workspace, or one tile. You never leave the canvas.</p>
+      </div>
+      <div class="shot-stage">
+        <figure class="shot-cell shot-cell-overview">
+          <figcaption><span>Overview</span><span>· 总览</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/canvas-overview.png" width="960" height="560" loading="lazy" decoding="async" alt="总览：Grok 在等你，Git 和笔记只显示身份。">
+          </div>
+        </figure>
+        <figure class="shot-cell shot-cell-workspace">
+          <figcaption><span>Workspace</span><span>· 工作区</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/workspace-maximized.png" width="960" height="560" loading="lazy" decoding="async" alt="工作区最大化：同一组 tile 铺满窗口。">
+          </div>
+        </figure>
+        <figure class="shot-cell shot-cell-tile">
+          <figcaption><span>Tile</span><span>· 瓦片</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/tile-maximized.png" width="960" height="560" loading="lazy" decoding="async" alt="Git tile 最大化，diff 铺满窗口。">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="canvas">
     <div class="wrap">
@@ -74,7 +112,6 @@
           <p>最小的单位。⌘ 加数字给常用 tile 一个相机快捷键；双击最大化，Esc 回到画布。</p>
         </article>
       </div>
-      <img class="lobby-shot" src="assets/lobby.png" width="960" height="560" alt="门厅：拖放开始，或点 Terminal、Agent、Note、Web。">
     </div>
   </section>
 
@@ -150,10 +187,6 @@
           <div class="tools-row"><code>mosaic_set_tile_status</code><span>agent 自报：等你 / 完成 / 失败</span></div>
           <div class="tools-row"><code>mosaic_undo · redo</code><span>走的是 ⌘Z 那条历史</span></div>
         </div>
-      </div>
-      <div class="shots-2">
-        <img src="assets/tile-terminal.png" width="480" height="280" alt="Grok 在终端 tile 里调用 mosaic MCP。">
-        <img src="assets/tile-git.png" width="520" height="340" alt="Git tile 打开了正在改的 RoomStore.swift diff。">
       </div>
     </div>
   </section>

@@ -16,6 +16,9 @@ cp "$SNAP/lobbyQuickStart.lobby.png" site/assets/lobby.png
 cp "$SNAP/canvasStrands.canvas-strands.png" site/assets/canvas-strands.png
 cp "$SNAP/gitTile.tile-git.png" site/assets/tile-git.png
 cp "$SNAP/terminalTile.tile-terminal.png" site/assets/tile-terminal.png
+cp "$SNAP/workspaceMaximized.workspace-maximized.png" site/assets/workspace-maximized.png
+cp "$SNAP/tileMaximized.tile-maximized.png" site/assets/tile-maximized.png
+cp "$SNAP/canvasOverview.canvas-overview.png" site/assets/canvas-overview.png
 ```
 
 GitHub Pages cannot publish from the private Mosaic repository on a Free
