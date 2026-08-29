@@ -276,7 +276,7 @@ h1 {
 
 .hero-stage {
   position: relative;
-  min-height: 420px;
+  min-height: 0;
 }
 
 .hero-stage .shot {
@@ -286,16 +286,6 @@ h1 {
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
   background: var(--slate-900);
-}
-
-.hero-stage .pill {
-  position: absolute;
-  right: 6%;
-  bottom: 18%;
-  height: 28px;
-  width: auto;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 .eyebrow {
@@ -634,10 +624,27 @@ kbd {
 }
 
 .lobby-shot {
+  width: 100%;
   margin-top: 46px;
   border-radius: var(--radius-l);
   border: 1px solid var(--hairline);
   overflow: hidden;
+  background: var(--slate-900);
+}
+
+.shots-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.shots-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--hairline);
   background: var(--slate-900);
 }
 
@@ -663,7 +670,8 @@ kbd {
   .attention-grid,
   .agent-grid,
   .cards-3,
-  .cards-4 {
+  .cards-4,
+  .shots-2 {
     grid-template-columns: 1fr;
   }
 
