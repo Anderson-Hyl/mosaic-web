@@ -3,6 +3,19 @@
 Public marketing site for Mosaic. Source lives in the private app repo
 (`site/`); this file ships with the published copy as well.
 
+Stills of the app come from `HomepageSnapshotTests` (SnapshotTesting).
+Record with `SNAPSHOT_TESTING_RECORD=all`, then copy the PNGs:
+
+```sh
+SNAP=MosaicPackage/Tests/MosaicCanvasTests/__Snapshots__/HomepageSnapshotTests
+cp "$SNAP/attentionPill.attention-pill.png" site/assets/attention-pill.png
+cp "$SNAP/noteTile.tile-note.png" site/assets/tile-note.png
+cp "$SNAP/glanceWaiting.glance-waiting.png" site/assets/glance-waiting.png
+cp "$SNAP/glanceFailed.glance-failed.png" site/assets/glance-failed.png
+cp "$SNAP/lobbyQuickStart.lobby.png" site/assets/lobby.png
+cp "$SNAP/canvasStrands.canvas-strands.png" site/assets/canvas-strands.png
+```
+
 GitHub Pages cannot publish from the private Mosaic repository on a Free
 plan. The site is therefore a separate public repository (`mosaic-web`)
 that contains only these files.

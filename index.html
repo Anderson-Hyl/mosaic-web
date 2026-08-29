@@ -1,136 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mosaic — Many threads. One surface.</title>
-  <meta name="description" content="A native macOS spatial workspace. Agents, terminals, diffs, and notes stay on the canvas. Who is waiting is a click, not a tab hunt.">
+  <title>Mosaic — 一个窗口，装下所有工作面</title>
+  <meta name="description" content="终端、agent、笔记、网页、别的应用的窗口，全部活在同一块无限画布上。macOS 原生，本地优先。">
   <meta property="og:title" content="Mosaic">
-  <meta property="og:description" content="Many threads. One surface. Nothing lost.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hero-strands.jpg">
+  <meta property="og:description" content="一个窗口，装下所有工作面。">
+  <meta property="og:image" content="assets/canvas-strands.png">
   <meta name="theme-color" content="#15191F">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="./">
-        <img src="assets/icon.png" width="28" height="28" alt="">
-        Mosaic
-      </a>
-      <span class="nav-meta">macOS 15</span>
+  <nav class="nav">
+    <a class="brand" href="./">
+      <img src="assets/icon.png" width="28" height="28" alt="">
+      Mosaic
+    </a>
+    <div class="nav-links">
+      <a href="#canvas">画布 Canvas</a>
+      <a href="#attention">注意力层 Attention</a>
+      <a href="#agent">Agent · MCP</a>
+      <a class="btn" href="#download">下载 Download</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-grid-a"></div>
+    <div class="hero-grid-b"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="kicker"><span class="live"></span>macOS 原生 · 本地优先 · Local-first</div>
+        <h1>一个窗口，<br>装下所有工作面</h1>
+        <p class="en-lead">One window for every surface you work on.</p>
+        <p class="zh-lead">终端、agent、笔记、网页、别的应用的窗口，全部活在同一块无限画布上。你摆放它们，agent 通过 MCP 与你改动同一块画布。</p>
+        <p class="en-sub">Terminals, agents, notes, web pages and other apps' windows live on one infinite canvas — and agents edit that same canvas through MCP.</p>
+        <div class="cta-row">
+          <a class="btn btn-lg" href="https://github.com/Anderson-Hyl/mosaic-web/releases">下载 DMG</a>
+          <span class="cta-note">macOS 15+ · Apple Silicon<br>签名并公证 Signed &amp; notarized</span>
+        </div>
+      </div>
+      <div class="hero-stage">
+        <img class="shot" src="assets/canvas-strands.png" width="720" height="420" alt="Mosaic 画布上三块 tile：agent、测试和笔记，各占一块地面。">
+        <img class="pill" src="assets/attention-pill.png" width="168" height="28" alt="2 waiting">
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero wrap">
-      <p class="kicker">A spatial workspace for the afternoon that will not stay on one task</p>
-      <h1>Many threads.<br>One surface.</h1>
-      <p class="lede">
-        Tabs hide everything but one. Mosaic lays the work out so nothing
-        has to wait off-screen — session, diff, and notes on the same ground.
-      </p>
-      <div class="meta-row">
-        <span class="chip">Local-first</span>
-        <span class="chip">Native macOS</span>
-        <span class="chip">Private preview</span>
+  <section class="section" id="canvas">
+    <div class="wrap">
+      <div class="eyebrow canvas">画布 · The canvas</div>
+      <h2>摆放，而不是来回切换</h2>
+      <p class="h2-en">You arrange things once, instead of alt-tabbing forever.</p>
+      <p class="body">每个 tile 都是真实的东西：PTY 终端、agent、笔记、便签、网页、git、文件，甚至别的应用的窗口。它们不是标签页，是画布上有位置、有大小、有邻居的对象。</p>
+      <div class="cards-3">
+        <article class="card">
+          <h3>Room · 房间</h3>
+          <div class="en">a whole canvas of its own</div>
+          <p>一整块自己的画布，通常对应一个项目。切换房间会先把当前这块写回磁盘，再载入另一块。</p>
+        </article>
+        <article class="card">
+          <h3>Workspace · 工作区</h3>
+          <div class="en">a region on the canvas</div>
+          <p>画布上圈出来的一块区域，可以绑定项目目录、命名、上色、自动排布。归属由几何决定——拖进去就是它的。</p>
+        </article>
+        <article class="card">
+          <h3>Tile · 瓦片</h3>
+          <div class="en">terminal · agent · note · web · git · window</div>
+          <p>最小的单位。⌘ 加数字给常用 tile 一个相机快捷键；双击最大化，Esc 回到画布。</p>
+        </article>
       </div>
-      <figure class="shot">
-        <img src="assets/hero-strands.jpg" width="2000" height="1250" alt="Three workspaces on a Mosaic canvas: a refactor agent beside its diff, an upgrade session, and a focused test run.">
-        <figcaption>Give every session its own ground.</figcaption>
-      </figure>
-    </section>
+      <img class="lobby-shot" src="assets/lobby.png" width="560" height="280" alt="门厅：拖放开始，或点 Terminal、Agent、Note、Web。">
+    </div>
+  </section>
 
-    <section class="section wrap">
-      <div class="split">
-        <div class="copy">
-          <p class="kicker">The usual surface</p>
-          <h2>Three sessions.<br>One visible at a time.</h2>
-          <p>
-            The bell rings in a tab you are not looking at. Output scrolls
-            away. Switching is guessing which one was waiting, and for how long.
-          </p>
+  <section class="section ink" id="attention">
+    <div class="wrap">
+      <div class="eyebrow attention">注意力层 · Attention layer</div>
+      <h2>谁在等我</h2>
+      <p class="h2-en">Who is waiting on me, right now.</p>
+      <div class="attention-grid">
+        <div>
+          <p class="body" style="margin-top:0">组织层回答「东西放在哪」，注意力层回答「现在该看哪」。状态只从可靠信号来：进程退出码、前台进程组、终端铃、agent 通过 MCP 自报。</p>
+          <p class="muted">Status never touches the database and never enters undo. Restart the app and everything is quiet again — a badge that survives a restart is lying to you.</p>
+          <div class="status-row">
+            <span class="status quiet"><span class="dot"></span>quiet 安静</span>
+            <span class="status running"><span class="dot"></span>running 在跑</span>
+            <span class="status waiting"><span class="dot"></span>waiting 等你</span>
+            <span class="status succeeded"><span class="dot"></span>succeeded 2 分前</span>
+            <span class="status failed"><span class="dot"></span>failed exit 65</span>
+          </div>
+          <p class="muted">succeeded 与 failed 会衰减：focus 一下，或者五分钟后，回到安静。</p>
+          <div class="glances">
+            <img src="assets/glance-waiting.png" width="240" height="160" alt="总览卡：Tests · focused，正在等待。">
+            <img src="assets/glance-failed.png" width="240" height="160" alt="总览卡：Focused tests，exit 65。">
+          </div>
         </div>
-        <figure class="shot">
-          <img src="assets/tabs-one.jpg" width="2000" height="1250" alt="A terminal tile running tmux: three sessions in a status bar, only one window visible, Upgrade flagged with a bell.">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section wrap">
-      <div class="split reverse">
-        <div class="copy">
-          <p class="kicker">Beside the question</p>
-          <h2>The agent edits.<br>The diff answers.</h2>
-          <p>
-            Diff, session, and notes live on the same strand. You do not hunt
-            scrollback for the thing that was already next to the prompt.
-          </p>
-        </div>
-        <figure class="shot">
-          <img src="assets/beside.jpg" width="2000" height="1250" alt="A Refactor workspace: Claude in a terminal tile, a live git diff beside it, a review note underneath.">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section wrap">
-      <div class="split">
-        <div class="copy">
-          <span class="waiting-pill"><span class="dot" aria-hidden="true"></span>2 waiting</span>
-          <h2>See who is waiting.</h2>
-          <p>
-            A bell you missed in another tab is a pill you can click. Jump to
-            the oldest ask. The count is every tile that needs you, not the
-            one currently in frame.
-          </p>
-          <div class="keys" aria-label="Shortcuts">
+        <div class="keys">
+          <div class="key-row">
             <kbd>⌥`</kbd>
-            <span class="nav-meta">next waiting</span>
+            <div><strong>注意力药丸 · Attention pill</strong><span>跳到最早那个在等你的 tile，跨房间也算。</span></div>
           </div>
-        </div>
-        <figure class="shot">
-          <img src="assets/waiting.jpg" width="2000" height="1250" alt="Mosaic chrome showing a 2 waiting pill while a meeting note sits on the canvas.">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section wrap">
-      <div class="split reverse">
-        <div class="copy">
-          <p class="kicker">Without leaving</p>
-          <h2>Look around.<br>Everything still runs.</h2>
-          <p>
-            Hold ⌥O to peek the whole room. Status stays readable when the
-            pixels recede. One done, one failed, seen without moving.
-          </p>
-          <div class="keys" aria-label="Shortcuts">
+          <div class="key-row">
             <kbd>⌥O</kbd>
-            <span class="nav-meta">peek the room</span>
+            <div><strong>总览 · Overview</strong><span>按住偷看，点按锁定；只画身份，点一下飞进去。</span></div>
+          </div>
+          <div class="key-row">
             <kbd>⌥Tab</kbd>
-            <span class="nav-meta">last tile</span>
+            <div><strong>MRU 弹跳 · Bounce back</strong><span>一键回到刚才那个，不用想。按住不放走列表。</span></div>
+          </div>
+          <div class="key-row">
+            <kbd>⌘K</kbd>
+            <div><strong>跳转面板 · Jump to</strong><span>tile、房间、recipe 同一个入口；等你的排最前。</span></div>
+          </div>
+          <div class="key-row">
+            <kbd>⌥H</kbd>
+            <div><strong>门厅 · Lobby</strong><span>删不掉的那块地面。想不清楚结构时，先放这儿。</span></div>
           </div>
         </div>
-        <figure class="shot">
-          <img src="assets/glance.jpg" width="2000" height="1250" alt="Room overview: each tile reduced to an identity card, including a failed test marked exit 1.">
-        </figure>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="close wrap">
-      <h2>Nothing lost.</h2>
-      <p>
-        A native macOS workspace, not a browser tab. The app is local-first
-        and still in private preview — there is no public download yet.
-      </p>
-    </section>
-  </main>
+  <section class="section" id="agent">
+    <div class="wrap">
+      <div class="eyebrow agent">Agent · MCP</div>
+      <h2>Agent 和你改的是同一块画布</h2>
+      <p class="h2-en">Agents edit the canvas you are looking at.</p>
+      <div class="agent-grid">
+        <div>
+          <p class="body" style="margin-top:0">应用自己就是 MCP 服务器，监听一个 Unix socket；agent 通过随附的 stdio shim 接进来。工具刻意做得小、语义化、面向数据：它们传递意图，不传递鼠标事件。</p>
+          <p class="body">每一次改动都走和你点菜单相同的那条 reducer——立刻出现在屏幕上，⌘Z 一样能撤回。</p>
+          <div class="cli">
+            <div><span class="dim">$</span> claude mcp add mosaic \</div>
+            <div class="pad">-- "$(pwd)/.build/debug/mosaic-mcp"</div>
+          </div>
+          <p class="muted">Mosaic 需要开着；shim 不会替你启动它。</p>
+        </div>
+        <div class="tools">
+          <div class="tools-head"><span>Tool</span><span>Effect</span></div>
+          <div class="tools-row"><code>mosaic_overview</code><span>房间与工作区的树，带实时 tile 计数</span></div>
+          <div class="tools-row"><code>mosaic_create_tile</code><span>新建任意种类的 tile，吸附进布局</span></div>
+          <div class="tools-row"><code>mosaic_focus_tile</code><span>把用户的相机移到某个 tile 上</span></div>
+          <div class="tools-row"><code>mosaic_present</code><span>用一个 tile 或工作区填满窗口</span></div>
+          <div class="tools-row"><code>mosaic_set_tile_status</code><span>agent 自报：等你 / 完成 / 失败</span></div>
+          <div class="tools-row"><code>mosaic_undo · redo</code><span>走的是 ⌘Z 那条历史</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="foot wrap">
-    <span>Mosaic</span>
-    <span>macOS 15 and later</span>
+  <section class="section" style="padding-top:96px;padding-bottom:96px;background:#12161C">
+    <div class="wrap cards-4">
+      <article class="card">
+        <h3>真实的终端</h3>
+        <div class="en">Real PTY sessions</div>
+        <p>每个终端 tile 是一条真的 PTY。会话跟着 tile 走：换房间、关掉视图都不断线，删掉 tile 才结束。</p>
+      </article>
+      <article class="card">
+        <h3>本地优先</h3>
+        <div class="en">Local-first, SQLite</div>
+        <p>没有账号，没有同步服务。房间、工作区、笔记都在你自己机器上的一个 SQLite 文件里。</p>
+      </article>
+      <article class="card">
+        <h3>配乐</h3>
+        <div class="en">Soundtrack</div>
+        <p>给应用绑一张专辑或歌单。配乐属于应用，不属于房间——换房间不换歌。</p>
+      </article>
+      <article class="card">
+        <h3>macOS 原生</h3>
+        <div class="en">AppKit + SwiftUI</div>
+        <p>不是套壳网页。签名、公证、直接下载安装；只在你把 tile 指向某个窗口时才申请录屏权限。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <h2>把工作面搬进一个窗口</h2>
+    <p class="h2-en">Move every surface into one window.</p>
+    <div class="cta-row">
+      <a class="btn btn-lg btn-xl" href="https://github.com/Anderson-Hyl/mosaic-web/releases">下载 DMG</a>
+    </div>
+    <p class="muted" style="margin-top:20px">macOS 15 或更高 · Apple Silicon · 已签名并公证<br>Requires macOS 15+. Signed and notarized; no account, no sync.</p>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span>Mosaic · 一块画布，装下所有工作面</span>
+    </div>
   </footer>
 </body>
 </html>
