@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mosaic — 多条工作线，一张画布</title>
-  <meta name="description" content="把终端、agent、改动与笔记留在一起。谁在等你，随时看见。macOS 原生，本地优先。">
+  <title>Mosaic — Several threads. One canvas.</title>
+  <meta name="description" content="Keep terminals, agents, changes, and notes together. See who needs you. Native macOS. Local-first.">
   <meta property="og:title" content="Mosaic">
-  <meta property="og:description" content="多条工作线，一张画布。">
+  <meta property="og:description" content="Several threads. One canvas.。">
   <meta property="og:image" content="assets/hero-hubs-dark.png">
   <meta name="theme-color" content="#15191F">
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -23,11 +23,11 @@
       Mosaic
     </a>
     <div class="nav-links">
-      <a href="#canvas">画布 Canvas</a>
-      <a href="#attention">注意力层 Attention</a>
+      <a href="#canvas">Canvas</a>
+      <a href="#attention">Attention</a>
       <a href="#agent">Agent · MCP</a>
-      <a href="mailto:lamberthyl@gmail.com?subject=Mosaic%20Feedback">反馈 Feedback</a>
-      <a class="btn" href="#download">下载 Download</a>
+      <a href="mailto:lamberthyl@gmail.com?subject=Mosaic%20Feedback">Feedback</a>
+      <a class="btn" href="#download">Download</a>
     </div>
   </nav>
 
@@ -36,14 +36,13 @@
     <div class="hero-grid-b"></div>
     <div class="hero-inner">
       <div class="hero-copy">
-        <div class="kicker"><span class="live"></span>macOS 原生 · 本地优先 · Local-first</div>
-        <h1>多条工作线，<br>一张画布。</h1>
-        <p class="en-lead">Several threads. One canvas.</p>
-        <p class="zh-lead">把终端、agent、改动与笔记留在一起。谁在等你，随时看见。</p>
+        <div class="kicker"><span class="live"></span>Native macOS · Local-first</div>
+        <h1>Several threads.<br>One canvas.</h1>
+        <p class="hero-description">Keep terminals, agents, changes, and notes together. See who needs you at a glance.</p>
         <p class="en-sub">Keep a session, its diff, and its notes connected. The waiting pill counts explicit asks.</p>
         <div class="cta-row">
-          <span class="btn btn-lg btn-disabled" aria-disabled="true">安装包准备中</span>
-          <span class="cta-note">macOS 15+ · 本地优先，无账号<br>macOS 15+. Local-first, no account.</span>
+          <span class="btn btn-lg btn-disabled" aria-disabled="true">Download coming soon</span>
+          <span class="cta-note">macOS 15+<br>Local-first. No account.</span>
         </div>
       </div>
       <figure class="hero-frame">
@@ -57,7 +56,7 @@
             height="900"
             fetchpriority="high"
             decoding="async"
-            alt="Mosaic 画布上的 Payments Hub 与相连的会话和笔记。">
+            alt="The Payments Hub on the Mosaic canvas, connected to its session and notes.">
         </picture>
       </figure>
     </div>
@@ -66,10 +65,9 @@
   <section class="section shots" aria-labelledby="shots-title">
     <div class="wrap">
       <div class="shots-copy">
-        <div class="eyebrow canvas">组织 · Membership</div>
-        <h2 id="shots-title">同一件事的工具，连在同一个 Hub 上</h2>
-        <p class="h2-en">A circular hub holds the name. Wires mark membership, not a sequence.</p>
-        <p class="body">工作区是画布上的圆形 Hub，名称在圆内。成员靠显式归属，不靠矩形位置。暂时不看的线可以折起来——进程还在跑。</p>
+        <div class="eyebrow canvas">Organization</div>
+        <h2 id="shots-title">Every thread has a home</h2>
+        <p class="body">Connect related sessions, files, and notes to a named workspace hub. Fold a workspace when you need more room; its processes keep running.</p>
       </div>
       <figure class="membership-frame">
         <picture>
@@ -80,7 +78,7 @@
             height="412"
             loading="lazy"
             decoding="async"
-            alt="Payments Hub 连着 grok 会话和 Handoff 笔记，保留 24 小时重试窗口的决定。">
+            alt="The Payments Hub connects a grok session and a Handoff note recording the decision to use a 24-hour retry window.">
         </picture>
       </figure>
     </div>
@@ -88,25 +86,24 @@
 
   <section class="section" id="canvas">
     <div class="wrap">
-      <div class="eyebrow canvas">画布 · The canvas</div>
-      <h2>摆放，而不是来回切换</h2>
-      <p class="h2-en">You arrange things once, instead of alt-tabbing forever.</p>
-      <p class="body">每个 tile 都是真实的东西：PTY 终端、agent、笔记、便签、网页、git、文件，甚至别的应用的窗口画面。它们不是标签页，是画布上有位置、有大小、有邻居的对象。</p>
+      <div class="eyebrow canvas">The canvas</div>
+      <h2>Arrange your tools. Keep your context.</h2>
+      <p class="body">Place terminals, agents, notes, web pages, Git diffs, files, and live views of other app windows on one canvas. Move and resize each tile to suit the work.</p>
       <div class="cards-3">
         <article class="card">
-          <h3>Room · 房间</h3>
+          <h3>Room</h3>
           <div class="en">a whole canvas of its own</div>
-          <p>一整块自己的画布，通常对应一个项目。切换房间会先把当前这块写回磁盘，再载入另一块。</p>
+          <p>A separate canvas for a project or area of work. Switching rooms saves the current canvas before opening the next.</p>
         </article>
         <article class="card">
-          <h3>Workspace · 工作区</h3>
+          <h3>Workspace</h3>
           <div class="en">a circular hub on the canvas</div>
-          <p>圆内是名称，连线标出成员。可以绑定项目目录、上色、Fit 或 Fold。拖进圆是加入；归属不靠矩形框。</p>
+          <p>Group related tiles around a named hub. Bind a project folder, choose a color, and fit or fold the group. Drag a tile into the hub to add it.</p>
         </article>
         <article class="card">
-          <h3>Tile · 瓦片</h3>
+          <h3>Tile</h3>
           <div class="en">terminal · agent · note · web · git · window</div>
-          <p>最小的单位。⌘ 加数字给常用 tile 一个相机快捷键；双击最大化，Esc 回到画布。</p>
+          <p>Your individual tool. Use ⌘ plus a number to jump to a favorite tile. Double-click to maximize it; press Esc to return to the canvas.</p>
         </article>
       </div>
     </div>
@@ -115,72 +112,70 @@
   <section class="section review-story" aria-labelledby="review-title">
     <div class="wrap feature-story">
       <div>
-        <div class="eyebrow canvas">改动 · Review in context</div>
-        <h2 id="review-title">对着改动，继续讨论</h2>
-        <p class="h2-en">The conversation and the change, side by side.</p>
-        <p class="body">Agent 做了什么，直接在旁边的 Git diff 里看。讨论留在会话里，决定写进笔记——不用为了找回上下文来回切窗口。</p>
+        <div class="eyebrow canvas">Review in context</div>
+        <h2 id="review-title">See the change. Keep the conversation.</h2>
+        <p class="body">Review your agent’s changes in a Git diff beside the session. Keep the discussion in the terminal and the decision in a note, all within reach.</p>
       </div>
       <figure class="tour-art layered-art">
-        <a href="assets/tour-beside-dark.png" aria-label="查看会话、Git diff 与决策笔记的大图">
+        <a href="assets/tour-beside-dark.png" aria-label="Enlarge the session, Git diff, and decision note">
           <picture>
             <source type="image/webp" srcset="assets/tour-beside-dark.webp">
             <img src="assets/tour-beside-dark.png" width="660" height="412" loading="lazy" decoding="async"
-              alt="会话、真实 Git diff 和决策笔记分层组合：将重试窗口从 72 小时改为 24 小时，并禁止重复重试。">
+              alt="A layered session, Git diff, and decision note: change the retry window from 72 to 24 hours and disable duplicate retries.">
           </picture>
         </a>
-        <figcaption>会话 · 实际改动 · 决策笔记 <span>点击查看大图 ↗</span></figcaption>
+        <figcaption>Session · Changes · Decision <span>View full size ↗</span></figcaption>
       </figure>
     </div>
   </section>
 
   <section class="section ink" id="attention">
     <div class="wrap">
-      <div class="eyebrow attention">注意力层 · Attention layer</div>
-      <h2>谁在等我</h2>
-      <p class="h2-en">Who is waiting on me, right now.</p>
+      <div class="eyebrow attention">Attention</div>
+      <h2>See who needs you</h2>
       <figure class="tour-art waiting-art">
-        <a href="assets/tour-waiting-dark.png" aria-label="查看等待回复功能的大图">
+        <a href="assets/tour-waiting-dark.png" aria-label="Enlarge the waiting requests example">
           <picture>
             <source type="image/webp" srcset="assets/tour-waiting-dark.webp">
             <img src="assets/tour-waiting-dark.png" width="660" height="412" loading="lazy" decoding="async"
-              alt="2 waiting 药丸汇总两个明确请求：Payments 会话正在询问重试窗口，折叠的 Release Hub 也有一个等待请求。">
+              alt="The 2 waiting pill counts a retry-window question in Payments and another request inside the folded Release Hub.">
           </picture>
         </a>
-        <figcaption>折叠的工作区，也不会藏起等待中的请求。 <span>点击查看大图 ↗</span></figcaption>
+        <figcaption>Requests stay visible, even in folded workspaces. <span>View full size ↗</span></figcaption>
       </figure>
       <div class="attention-grid">
         <div>
-          <p class="body" style="margin-top:0">组织层回答「东西放在哪」，注意力层回答「现在该看哪」。状态只从可靠信号来：进程退出码、前台进程组、终端铃、agent 通过 MCP 自报。还在跑的 REPL 不是 waiting。</p>
-          <p class="muted">Status never touches the database and never enters undo. Restart the app and everything is quiet again — a badge that survives a restart is lying to you.</p>
+          <p class="body" style="margin-top:0">Find the sessions that need a reply. Mosaic uses process signals, terminal bells, and explicit agent reports through MCP to track activity. A running agent session stays running until it asks for attention.</p>
+          <p class="muted">Activity status reflects the current session. It resets when you restart Mosaic.</p>
           <div class="status-row">
-            <span class="status quiet"><span class="dot"></span>quiet 安静</span>
-            <span class="status running"><span class="dot"></span>running 在跑</span>
-            <span class="status waiting"><span class="dot"></span>waiting 等你</span>
-            <span class="status succeeded"><span class="dot"></span>succeeded 2 分前</span>
+            <span class="status quiet"><span class="dot"></span>quiet</span>
+            <span class="status running"><span class="dot"></span>running</span>
+            <span class="status waiting"><span class="dot"></span>waiting</span>
+            <span class="status succeeded"><span class="dot"></span>succeeded · 2m ago</span>
             <span class="status failed"><span class="dot"></span>failed exit 65</span>
           </div>
-          <p class="muted">succeeded 与 failed 会衰减：focus 一下，或者五分钟后，回到安静。</p>
+          <p class="muted">Success and failure badges clear when you focus the tile, or after five minutes.</p>
         </div>
         <div class="keys">
           <div class="key-row">
             <kbd>⌥`</kbd>
-            <div><strong>注意力药丸 · Attention pill</strong><span>计数来自显式等待。点一下跳到最早那个，跨房间也算。</span></div>
+            <div><strong>Attention pill</strong><span>Counts explicit requests. Jump to the oldest one, even in another room.</span></div>
           </div>
           <div class="key-row">
             <kbd>⌥O</kbd>
-            <div><strong>总览 · Overview</strong><span>按住偷看，点按锁定。选一个 tile，回到它的上下文。</span></div>
+            <div><strong>Overview</strong><span>Hold to peek, tap to keep it open. Pick a tile to return to its context.</span></div>
           </div>
           <div class="key-row">
             <kbd>⌥Tab</kbd>
-            <div><strong>MRU 弹跳 · Bounce back</strong><span>一键回到刚才那个，不用想。按住不放走列表。</span></div>
+            <div><strong>Bounce back</strong><span>Return to your previous tile. Hold to browse recent tiles.</span></div>
           </div>
           <div class="key-row">
             <kbd>⌘K</kbd>
-            <div><strong>跳转面板 · Jump to</strong><span>tile、房间、工作区同一个入口；等你的排最前。</span></div>
+            <div><strong>Jump to</strong><span>Find tiles, rooms, and workspaces in one place. Waiting requests come first.</span></div>
           </div>
           <div class="key-row">
             <kbd>⌥H</kbd>
-            <div><strong>门厅 · Lobby</strong><span>删不掉的那块地面。想不清楚结构时，先放这儿。</span></div>
+            <div><strong>Lobby</strong><span>A permanent place to start. Put things here while you figure out where they belong.</span></div>
           </div>
         </div>
       </div>
@@ -190,20 +185,19 @@
   <section class="section overview-story" aria-labelledby="overview-title">
     <div class="wrap feature-story">
       <div>
-        <div class="eyebrow attention">切换 · Back in context</div>
-        <h2 id="overview-title">看一眼全局，回到手上的事</h2>
-        <p class="h2-en">One shortcut. Back in context.</p>
-        <p class="body">按 <kbd>⌥O</kbd> 看总览。找到需要你的会话，点一下就回到它所在的位置；按住只是偷看，松开回到原处。</p>
+        <div class="eyebrow attention">Overview</div>
+        <h2 id="overview-title">See the whole room. Pick up where you left off.</h2>
+        <p class="body">Press <kbd>⌥O</kbd> for an overview. Pick a session to return to its place on the canvas. Hold the shortcut for a quick peek, then release to go back.</p>
       </div>
       <figure class="tour-art layered-art">
-        <a href="assets/tour-glance-dark.png" aria-label="查看从总览返回会话的大图">
+        <a href="assets/tour-glance-dark.png" aria-label="Enlarge the overview-to-session example">
           <picture>
             <source type="image/webp" srcset="assets/tour-glance-dark.webp">
             <img src="assets/tour-glance-dark.png" width="660" height="412" loading="lazy" decoding="async"
-              alt="按 ⌥O 打开总览，点选等待中的 grok payments 卡片，返回询问重试窗口的同一会话。">
+              alt="Open the overview with ⌥O, select the waiting grok payments card, and return to the same session asking about the retry window.">
           </picture>
         </a>
-        <figcaption>总览点选 → 回到同一会话 <span>点击查看大图 ↗</span></figcaption>
+        <figcaption>Pick a tile → Return to its session <span>View full size ↗</span></figcaption>
       </figure>
     </div>
   </section>
@@ -211,26 +205,25 @@
   <section class="section" id="agent">
     <div class="wrap">
       <div class="eyebrow agent">Agent · MCP</div>
-      <h2>Agent 和你改的是同一块画布</h2>
-      <p class="h2-en">Agents edit the canvas you are looking at.</p>
+      <h2>Your agents share your canvas</h2>
       <div class="agent-grid">
         <div>
-          <p class="body" style="margin-top:0">应用自己就是 MCP 服务器，监听一个 Unix socket；agent 通过随附的 stdio shim 接进来。工具刻意做得小、语义化、面向数据：它们传递意图，不传递鼠标事件。</p>
-          <p class="body">每一次改动都走和你点菜单相同的那条 reducer——立刻出现在屏幕上，⌘Z 一样能撤回。</p>
+          <p class="body" style="margin-top:0">Connect an agent through Mosaic’s MCP bridge. It can inspect the workspace, create tiles, focus a session, and report when it needs your input.</p>
+          <p class="body">Canvas edits appear immediately and use the same undo history as your own actions. Press ⌘Z to undo.</p>
           <div class="cli">
             <div><span class="dim">$</span> claude mcp add mosaic \</div>
             <div class="pad">-- "$(pwd)/.build/debug/mosaic-mcp"</div>
           </div>
-          <p class="muted">Mosaic 需要开着；shim 不会替你启动它。</p>
+          <p class="muted">Run this from your Mosaic checkout. Keep the app open while using the bridge.</p>
         </div>
         <div class="tools">
           <div class="tools-head"><span>Tool</span><span>Effect</span></div>
-          <div class="tools-row"><code>mosaic_overview</code><span>房间与工作区的树，带实时 tile 计数</span></div>
-          <div class="tools-row"><code>mosaic_create_tile</code><span>新建任意种类的 tile，可指定工作区</span></div>
-          <div class="tools-row"><code>mosaic_focus_tile</code><span>把用户的相机移到某个 tile 上</span></div>
-          <div class="tools-row"><code>mosaic_present</code><span>用一个 tile 填满窗口；工作区 id 则聚焦 Hub</span></div>
-          <div class="tools-row"><code>mosaic_set_tile_status</code><span>agent 自报：等你 / 完成 / 失败</span></div>
-          <div class="tools-row"><code>mosaic_undo · redo</code><span>走的是 ⌘Z 那条历史</span></div>
+          <div class="tools-row"><code>mosaic_overview</code><span>List rooms and workspaces with live tile counts</span></div>
+          <div class="tools-row"><code>mosaic_create_tile</code><span>Create a tile in a room or workspace</span></div>
+          <div class="tools-row"><code>mosaic_focus_tile</code><span>Move the canvas to a tile</span></div>
+          <div class="tools-row"><code>mosaic_present</code><span>Present a tile or focus a workspace hub</span></div>
+          <div class="tools-row"><code>mosaic_set_tile_status</code><span>Report waiting, succeeded, or failed</span></div>
+          <div class="tools-row"><code>mosaic_undo · redo</code><span>Use the same undo history as ⌘Z</span></div>
         </div>
       </div>
     </div>
@@ -239,41 +232,40 @@
   <section class="section" style="padding-top:96px;padding-bottom:96px;background:#12161C">
     <div class="wrap cards-4">
       <article class="card">
-        <h3>真实的终端</h3>
+        <h3>Real terminals</h3>
         <div class="en">Real PTY sessions</div>
-        <p>每个终端 tile 是一条真的 PTY。会话跟着 tile 走：换房间、关掉视图都不断线，删掉 tile 才结束。</p>
+        <p>Every terminal tile runs a real PTY session. It keeps running when you switch rooms or close its view, and ends when you delete the tile.</p>
       </article>
       <article class="card">
-        <h3>本地优先</h3>
+        <h3>Local-first</h3>
         <div class="en">Local-first, SQLite</div>
-        <p>没有账号，没有同步服务。房间、工作区、笔记都在你自己机器上的一个 SQLite 文件里。</p>
+        <p>Your rooms, workspaces, and notes live in a SQLite database on your Mac. No account or sync service required.</p>
       </article>
       <article class="card">
-        <h3>配乐</h3>
-        <div class="en">Soundtrack</div>
-        <p>给应用绑一张专辑或歌单。配乐属于应用，不属于房间——换房间不换歌。</p>
+        <h3>Soundtrack</h3>
+        <div class="en">Apple Music</div>
+        <p>Choose an Apple Music album or playlist for Mosaic. Your soundtrack keeps playing as you move between rooms.</p>
       </article>
       <article class="card">
-        <h3>macOS 原生</h3>
+        <h3>Native macOS</h3>
         <div class="en">AppKit + SwiftUI</div>
-        <p>不是套壳网页。只在你把 tile 指向某个窗口时才申请录屏权限。</p>
+        <p>Built with AppKit and SwiftUI. Screen recording permission is requested only when you choose to view another app’s window in a tile.</p>
       </article>
     </div>
   </section>
 
   <section class="download" id="download">
-    <h2>把工作线留在一张画布上</h2>
-    <p class="h2-en">Keep every thread on one canvas.</p>
+    <h2>Keep every thread on one canvas.</h2>
     <div class="cta-row">
-      <span class="btn btn-lg btn-xl btn-disabled" aria-disabled="true">安装包准备中</span>
+      <span class="btn btn-lg btn-xl btn-disabled" aria-disabled="true">Download coming soon</span>
     </div>
-    <p class="muted" style="margin-top:20px">macOS 15 或更高 · 本地优先，无账号无同步<br>Requires macOS 15+. No account, no sync.</p>
+    <p class="muted" style="margin-top:20px">Requires macOS 15+. No account, no sync.</p>
   </section>
 
   <footer class="foot">
     <div class="foot-inner">
-      <span>Mosaic · 多条工作线，一张画布</span>
-      <a href="mailto:lamberthyl@gmail.com?subject=Mosaic%20Feedback">邮件反馈 · lamberthyl@gmail.com</a>
+      <span>Mosaic · Several threads. One canvas.</span>
+      <a href="mailto:lamberthyl@gmail.com?subject=Mosaic%20Feedback">Email feedback · lamberthyl@gmail.com</a>
     </div>
   </footer>
 </body>

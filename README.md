@@ -1,6 +1,7 @@
 # Mosaic homepage
 
 Public marketing site for Mosaic. This repository is the source.
+The homepage is English-only, matching the app’s current interface.
 
 Live URL: https://anderson-hyl.github.io/mosaic-web/
 
@@ -23,7 +24,7 @@ The layered page 3 and 4 images retain transparency; CSS supplies the blue
 radial-gradient background. Each image has a lossless WebP derivative and a PNG
 fallback. Feature images link to the full-size PNG for closer inspection.
 
-There is no public DMG yet. The download CTA stays “安装包准备中” until a
+There is no public DMG yet. The download CTA stays “Download coming soon” until a
 GitHub Release asset exists and `releases/latest.json` can be filled.
 
 Preview:
