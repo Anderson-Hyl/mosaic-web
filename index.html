@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mosaic — 一个窗口，装下所有工作面</title>
-  <meta name="description" content="终端、agent、笔记、网页、别的应用的窗口，全部活在同一块无限画布上。macOS 原生，本地优先。">
+  <title>Mosaic — 多条工作线，一张画布</title>
+  <meta name="description" content="把终端、agent、改动与笔记留在一起。谁在等你，随时看见。macOS 原生，本地优先。">
   <meta property="og:title" content="Mosaic">
-  <meta property="og:description" content="一个窗口，装下所有工作面。">
-  <meta property="og:image" content="assets/canvas-strands.png">
+  <meta property="og:description" content="多条工作线，一张画布。">
+  <meta property="og:image" content="assets/hero-hubs-dark.png">
   <meta name="theme-color" content="#15191F">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -34,58 +34,54 @@
     <div class="hero-grid-a"></div>
     <div class="hero-grid-b"></div>
     <div class="hero-inner">
-      <div>
+      <div class="hero-copy">
         <div class="kicker"><span class="live"></span>macOS 原生 · 本地优先 · Local-first</div>
-        <h1>一个窗口，<br>装下所有工作面</h1>
-        <p class="en-lead">One window for every surface you work on.</p>
-        <p class="zh-lead">终端、agent、笔记、网页、别的应用的窗口，全部活在同一块无限画布上。你摆放它们，agent 通过 MCP 与你改动同一块画布。</p>
-        <p class="en-sub">Terminals, agents, notes, web pages and other apps' windows live on one infinite canvas — and agents edit that same canvas through MCP.</p>
+        <h1>多条工作线，<br>一张画布。</h1>
+        <p class="en-lead">Several threads. One canvas.</p>
+        <p class="zh-lead">把终端、agent、改动与笔记留在一起。谁在等你，随时看见。</p>
+        <p class="en-sub">Keep a session, its diff, and its notes connected. The waiting pill counts explicit asks.</p>
         <div class="cta-row">
-          <a class="btn btn-lg" href="https://github.com/Anderson-Hyl/mosaic-web/releases">下载 DMG</a>
-          <span class="cta-note">macOS 15+ · Apple Silicon<br>签名并公证 Signed &amp; notarized</span>
+          <span class="btn btn-lg btn-disabled" aria-disabled="true">安装包准备中</span>
+          <span class="cta-note">macOS 15+ · 本地优先，无账号<br>macOS 15+. Local-first, no account.</span>
         </div>
       </div>
-      <div class="hero-stage" role="group" aria-label="Mosaic 画布与其中的 Terminal、Git tile">
-        <figure class="hero-shot hero-shot-terminal">
-          <img src="assets/tile-terminal.png" width="960" height="560" decoding="async" alt="Grok terminal tile：agent 通过 MCP 创建了 Git tile。">
-        </figure>
-        <figure class="hero-shot hero-shot-git">
-          <img src="assets/tile-git.png" width="1040" height="680" decoding="async" alt="Git tile：RoomStore.swift 的本地改动。">
-        </figure>
-        <figure class="hero-shot hero-shot-canvas">
-          <img src="assets/canvas-strands.png" width="960" height="560" fetchpriority="high" alt="Mosaic 画布：Grok 终端、Git diff 和笔记在同一个工作区里。">
-        </figure>
-      </div>
+      <figure class="hero-frame">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="assets/tour-ground-dark.webp">
+          <source media="(max-width: 767px)" srcset="assets/tour-ground-dark.png">
+          <source type="image/webp" srcset="assets/hero-hubs-dark.webp">
+          <img
+            src="assets/hero-hubs-dark.png"
+            width="1440"
+            height="900"
+            fetchpriority="high"
+            decoding="async"
+            alt="Mosaic 画布：Payments 与 Web 两个圆形 Hub 展开成员，一张会议笔记在旁边。Payments 连着终端、Git diff 和结论笔记。">
+        </picture>
+      </figure>
     </div>
   </header>
 
   <section class="section shots" aria-labelledby="shots-title">
     <div class="wrap">
       <div class="shots-copy">
-        <div class="eyebrow canvas">视距 · Three distances</div>
-        <h2 id="shots-title">需要多少上下文，就靠近多少</h2>
-        <p class="h2-en">Overview, workspace, or one tile. You never leave the canvas.</p>
+        <div class="eyebrow canvas">组织 · Membership</div>
+        <h2 id="shots-title">同一件事的工具，连在同一个 Hub 上</h2>
+        <p class="h2-en">A circular hub holds the name. Wires mark membership, not a sequence.</p>
+        <p class="body">工作区是画布上的圆形 Hub，名称在圆内。成员靠显式归属，不靠矩形位置。暂时不看的线可以折起来——进程还在跑。</p>
       </div>
-      <div class="shot-stage">
-        <figure class="shot-cell shot-cell-overview">
-          <figcaption><span>Overview</span><span>· 总览</span></figcaption>
-          <div class="shot-frame">
-            <img src="assets/canvas-overview.png" width="960" height="560" loading="lazy" decoding="async" alt="总览：Grok 在等你，Git 和笔记只显示身份。">
-          </div>
-        </figure>
-        <figure class="shot-cell shot-cell-workspace">
-          <figcaption><span>Workspace</span><span>· 工作区</span></figcaption>
-          <div class="shot-frame">
-            <img src="assets/workspace-maximized.png" width="960" height="560" loading="lazy" decoding="async" alt="工作区最大化：同一组 tile 铺满窗口。">
-          </div>
-        </figure>
-        <figure class="shot-cell shot-cell-tile">
-          <figcaption><span>Tile</span><span>· 瓦片</span></figcaption>
-          <div class="shot-frame">
-            <img src="assets/tile-maximized.png" width="960" height="560" loading="lazy" decoding="async" alt="Git tile 最大化，diff 铺满窗口。">
-          </div>
-        </figure>
-      </div>
+      <figure class="membership-frame">
+        <picture>
+          <source type="image/webp" srcset="assets/tour-ground-dark.webp">
+          <img
+            src="assets/tour-ground-dark.png"
+            width="660"
+            height="412"
+            loading="lazy"
+            decoding="async"
+            alt="Payments Hub 连着 grok 会话、RetryPolicy.swift 的真实 diff，和写着 24h 结论的笔记。">
+        </picture>
+      </figure>
     </div>
   </section>
 
@@ -94,7 +90,7 @@
       <div class="eyebrow canvas">画布 · The canvas</div>
       <h2>摆放，而不是来回切换</h2>
       <p class="h2-en">You arrange things once, instead of alt-tabbing forever.</p>
-      <p class="body">每个 tile 都是真实的东西：PTY 终端、agent、笔记、便签、网页、git、文件，甚至别的应用的窗口。它们不是标签页，是画布上有位置、有大小、有邻居的对象。</p>
+      <p class="body">每个 tile 都是真实的东西：PTY 终端、agent、笔记、便签、网页、git、文件，甚至别的应用的窗口画面。它们不是标签页，是画布上有位置、有大小、有邻居的对象。</p>
       <div class="cards-3">
         <article class="card">
           <h3>Room · 房间</h3>
@@ -103,8 +99,8 @@
         </article>
         <article class="card">
           <h3>Workspace · 工作区</h3>
-          <div class="en">a region on the canvas</div>
-          <p>画布上圈出来的一块区域，可以绑定项目目录、命名、上色、自动排布。归属由几何决定——拖进去就是它的。</p>
+          <div class="en">a circular hub on the canvas</div>
+          <p>圆内是名称，连线标出成员。可以绑定项目目录、上色、Fit 或 Fold。拖进圆是加入；归属不靠矩形框。</p>
         </article>
         <article class="card">
           <h3>Tile · 瓦片</h3>
@@ -122,7 +118,7 @@
       <p class="h2-en">Who is waiting on me, right now.</p>
       <div class="attention-grid">
         <div>
-          <p class="body" style="margin-top:0">组织层回答「东西放在哪」，注意力层回答「现在该看哪」。状态只从可靠信号来：进程退出码、前台进程组、终端铃、agent 通过 MCP 自报。</p>
+          <p class="body" style="margin-top:0">组织层回答「东西放在哪」，注意力层回答「现在该看哪」。状态只从可靠信号来：进程退出码、前台进程组、终端铃、agent 通过 MCP 自报。还在跑的 REPL 不是 waiting。</p>
           <p class="muted">Status never touches the database and never enters undo. Restart the app and everything is quiet again — a badge that survives a restart is lying to you.</p>
           <div class="status-row">
             <span class="status quiet"><span class="dot"></span>quiet 安静</span>
@@ -132,19 +128,15 @@
             <span class="status failed"><span class="dot"></span>failed exit 65</span>
           </div>
           <p class="muted">succeeded 与 failed 会衰减：focus 一下，或者五分钟后，回到安静。</p>
-          <div class="glances">
-            <img src="assets/glance-waiting.png" width="240" height="160" alt="总览卡：Tests · focused，正在等待。">
-            <img src="assets/glance-failed.png" width="240" height="160" alt="总览卡：Focused tests，exit 65。">
-          </div>
         </div>
         <div class="keys">
           <div class="key-row">
             <kbd>⌥`</kbd>
-            <div><strong>注意力药丸 · Attention pill</strong><span>跳到最早那个在等你的 tile，跨房间也算。</span></div>
+            <div><strong>注意力药丸 · Attention pill</strong><span>计数来自显式等待。点一下跳到最早那个，跨房间也算。</span></div>
           </div>
           <div class="key-row">
             <kbd>⌥O</kbd>
-            <div><strong>总览 · Overview</strong><span>按住偷看，点按锁定；只画身份，点一下飞进去。</span></div>
+            <div><strong>总览 · Overview</strong><span>按住偷看，点按锁定。选一个 tile，回到它的上下文。</span></div>
           </div>
           <div class="key-row">
             <kbd>⌥Tab</kbd>
@@ -152,7 +144,7 @@
           </div>
           <div class="key-row">
             <kbd>⌘K</kbd>
-            <div><strong>跳转面板 · Jump to</strong><span>tile、房间、recipe 同一个入口；等你的排最前。</span></div>
+            <div><strong>跳转面板 · Jump to</strong><span>tile、房间、工作区同一个入口；等你的排最前。</span></div>
           </div>
           <div class="key-row">
             <kbd>⌥H</kbd>
@@ -181,9 +173,9 @@
         <div class="tools">
           <div class="tools-head"><span>Tool</span><span>Effect</span></div>
           <div class="tools-row"><code>mosaic_overview</code><span>房间与工作区的树，带实时 tile 计数</span></div>
-          <div class="tools-row"><code>mosaic_create_tile</code><span>新建任意种类的 tile，吸附进布局</span></div>
+          <div class="tools-row"><code>mosaic_create_tile</code><span>新建任意种类的 tile，可指定工作区</span></div>
           <div class="tools-row"><code>mosaic_focus_tile</code><span>把用户的相机移到某个 tile 上</span></div>
-          <div class="tools-row"><code>mosaic_present</code><span>用一个 tile 或工作区填满窗口</span></div>
+          <div class="tools-row"><code>mosaic_present</code><span>用一个 tile 填满窗口；工作区 id 则聚焦 Hub</span></div>
           <div class="tools-row"><code>mosaic_set_tile_status</code><span>agent 自报：等你 / 完成 / 失败</span></div>
           <div class="tools-row"><code>mosaic_undo · redo</code><span>走的是 ⌘Z 那条历史</span></div>
         </div>
@@ -211,23 +203,23 @@
       <article class="card">
         <h3>macOS 原生</h3>
         <div class="en">AppKit + SwiftUI</div>
-        <p>不是套壳网页。签名、公证、直接下载安装；只在你把 tile 指向某个窗口时才申请录屏权限。</p>
+        <p>不是套壳网页。只在你把 tile 指向某个窗口时才申请录屏权限。</p>
       </article>
     </div>
   </section>
 
   <section class="download" id="download">
-    <h2>把工作面搬进一个窗口</h2>
-    <p class="h2-en">Move every surface into one window.</p>
+    <h2>把工作线留在一张画布上</h2>
+    <p class="h2-en">Keep every thread on one canvas.</p>
     <div class="cta-row">
-      <a class="btn btn-lg btn-xl" href="https://github.com/Anderson-Hyl/mosaic-web/releases">下载 DMG</a>
+      <span class="btn btn-lg btn-xl btn-disabled" aria-disabled="true">安装包准备中</span>
     </div>
-    <p class="muted" style="margin-top:20px">macOS 15 或更高 · Apple Silicon · 已签名并公证<br>Requires macOS 15+. Signed and notarized; no account, no sync.</p>
+    <p class="muted" style="margin-top:20px">macOS 15 或更高 · 本地优先，无账号无同步<br>Requires macOS 15+. No account, no sync.</p>
   </section>
 
   <footer class="foot">
     <div class="foot-inner">
-      <span>Mosaic · 一块画布，装下所有工作面</span>
+      <span>Mosaic · 多条工作线，一张画布</span>
     </div>
   </footer>
 </body>
