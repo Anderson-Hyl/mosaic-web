@@ -14,8 +14,14 @@ there; this repo only receives reviewed derivatives.
 ./Scripts/marketing-assets export --web-root /Users/anderson/Developer/mosaic-web
 ```
 
-Current page uses `hub-v1` Hero and Tour page 1 stills (circular Workspace Hub).
+Current page keeps the `hub-v1` desktop Hero and uses the reviewed Tour artwork
+from Mosaic commit `54b214f`: page 1 for membership and the mobile hero,
+page 2 for attention, page 3 for reviewing changes, and page 4 for overview.
 They are deterministic fixture screenshots, not live agent evidence.
+
+The layered page 3 and 4 images retain transparency; CSS supplies the blue
+radial-gradient background. Each image has a lossless WebP derivative and a PNG
+fallback. Feature images link to the full-size PNG for closer inspection.
 
 There is no public DMG yet. The download CTA stays “安装包准备中” until a
 GitHub Release asset exists and `releases/latest.json` can be filled.

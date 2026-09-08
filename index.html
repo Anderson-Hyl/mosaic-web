@@ -56,7 +56,7 @@
             height="900"
             fetchpriority="high"
             decoding="async"
-            alt="Mosaic 画布：Payments 与 Web 两个圆形 Hub 展开成员，一张会议笔记在旁边。Payments 连着终端、Git diff 和结论笔记。">
+            alt="Mosaic 画布上的 Payments Hub 与相连的会话和笔记。">
         </picture>
       </figure>
     </div>
@@ -79,7 +79,7 @@
             height="412"
             loading="lazy"
             decoding="async"
-            alt="Payments Hub 连着 grok 会话、RetryPolicy.swift 的真实 diff，和写着 24h 结论的笔记。">
+            alt="Payments Hub 连着 grok 会话和 Handoff 笔记，保留 24 小时重试窗口的决定。">
         </picture>
       </figure>
     </div>
@@ -111,11 +111,42 @@
     </div>
   </section>
 
+  <section class="section review-story" aria-labelledby="review-title">
+    <div class="wrap feature-story">
+      <div>
+        <div class="eyebrow canvas">改动 · Review in context</div>
+        <h2 id="review-title">对着改动，继续讨论</h2>
+        <p class="h2-en">The conversation and the change, side by side.</p>
+        <p class="body">Agent 做了什么，直接在旁边的 Git diff 里看。讨论留在会话里，决定写进笔记——不用为了找回上下文来回切窗口。</p>
+      </div>
+      <figure class="tour-art layered-art">
+        <a href="assets/tour-beside-dark.png" aria-label="查看会话、Git diff 与决策笔记的大图">
+          <picture>
+            <source type="image/webp" srcset="assets/tour-beside-dark.webp">
+            <img src="assets/tour-beside-dark.png" width="660" height="412" loading="lazy" decoding="async"
+              alt="会话、真实 Git diff 和决策笔记分层组合：将重试窗口从 72 小时改为 24 小时，并禁止重复重试。">
+          </picture>
+        </a>
+        <figcaption>会话 · 实际改动 · 决策笔记 <span>点击查看大图 ↗</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="section ink" id="attention">
     <div class="wrap">
       <div class="eyebrow attention">注意力层 · Attention layer</div>
       <h2>谁在等我</h2>
       <p class="h2-en">Who is waiting on me, right now.</p>
+      <figure class="tour-art waiting-art">
+        <a href="assets/tour-waiting-dark.png" aria-label="查看等待回复功能的大图">
+          <picture>
+            <source type="image/webp" srcset="assets/tour-waiting-dark.webp">
+            <img src="assets/tour-waiting-dark.png" width="660" height="412" loading="lazy" decoding="async"
+              alt="2 waiting 药丸汇总两个明确请求：Payments 会话正在询问重试窗口，折叠的 Release Hub 也有一个等待请求。">
+          </picture>
+        </a>
+        <figcaption>折叠的工作区，也不会藏起等待中的请求。 <span>点击查看大图 ↗</span></figcaption>
+      </figure>
       <div class="attention-grid">
         <div>
           <p class="body" style="margin-top:0">组织层回答「东西放在哪」，注意力层回答「现在该看哪」。状态只从可靠信号来：进程退出码、前台进程组、终端铃、agent 通过 MCP 自报。还在跑的 REPL 不是 waiting。</p>
@@ -152,6 +183,27 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section overview-story" aria-labelledby="overview-title">
+    <div class="wrap feature-story">
+      <div>
+        <div class="eyebrow attention">切换 · Back in context</div>
+        <h2 id="overview-title">看一眼全局，回到手上的事</h2>
+        <p class="h2-en">One shortcut. Back in context.</p>
+        <p class="body">按 <kbd>⌥O</kbd> 看总览。找到需要你的会话，点一下就回到它所在的位置；按住只是偷看，松开回到原处。</p>
+      </div>
+      <figure class="tour-art layered-art">
+        <a href="assets/tour-glance-dark.png" aria-label="查看从总览返回会话的大图">
+          <picture>
+            <source type="image/webp" srcset="assets/tour-glance-dark.webp">
+            <img src="assets/tour-glance-dark.png" width="660" height="412" loading="lazy" decoding="async"
+              alt="按 ⌥O 打开总览，点选等待中的 grok payments 卡片，返回询问重试窗口的同一会话。">
+          </picture>
+        </a>
+        <figcaption>总览点选 → 回到同一会话 <span>点击查看大图 ↗</span></figcaption>
+      </figure>
     </div>
   </section>
 
