@@ -734,3 +734,5 @@ kbd {
 }
 
 [id] { scroll-margin-top: 88px; }
+
+.foot-inner { flex-wrap: wrap; }
