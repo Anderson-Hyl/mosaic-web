@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "build": "1",
+  "minimumSystemVersion": "15.0",
+  "architecture": "arm64",
+  "sha256": "2d8a8305ec336210ad858e63940ba405c9846aaa3f95004b680f9d2dfee4ce57",
+  "bytes": 13494261,
+  "sourceCommit": "3fea2b2e8e2c5c31f7b022a4c3e37d17e6824a3d",
+  "url": "https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.0.0/Mosaic-1.0.0-1.dmg",
+  "notarized": false,
+  "preview": true
+}

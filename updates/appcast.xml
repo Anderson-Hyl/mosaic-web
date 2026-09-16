@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mosaic</title>
+        <item>
+            <title>1.0.0</title>
+            <pubDate>Wed, 16 Sep 2026 17:40:22 +0800</pubDate>
+            <link>https://anderson-hyl.github.io/mosaic-web/</link>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <sparkle:releaseNotesLink>https://anderson-hyl.github.io/mosaic-web/updates/Mosaic-1.0.0-1.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.0.0/Mosaic-1.0.0-1.dmg" length="13494261" type="application/octet-stream" sparkle:edSignature="d3uuehKu8nwsL9phLnSOEIFsA1G1v4LWda0nIkFCL7drqlb97L+dxTSrM06nyNjJYeVo27sE0BNnQ7aR33G0AA==" />
+        </item>
+    </channel>
+</rss>
