@@ -136,6 +136,15 @@ a:hover {
   color: #fff;
 }
 
+.nav-links .btn {
+  color: #fff;
+}
+
+.nav-links .btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
 .btn-lg {
   height: 44px;
   padding: 0 22px;
@@ -287,6 +296,22 @@ h1 {
   font-size: 12px;
   color: var(--slate-400);
   line-height: 1.5;
+}
+
+.download-count {
+  margin: 12px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--slate-400);
+  font-variant-numeric: tabular-nums;
+}
+
+.download-count[hidden] {
+  display: none;
+}
+
+.hero .download-count {
+  max-width: 460px;
 }
 
 .hero-frame {

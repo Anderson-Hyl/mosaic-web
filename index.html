@@ -41,9 +41,10 @@
         <p class="hero-description">Keep terminals, agents, changes, and notes together. See who needs you at a glance.</p>
         <p class="en-sub">Keep a session, its diff, and its notes connected. The waiting pill counts explicit asks.</p>
         <div class="cta-row">
-          <a id="mosaic-download-link" class="btn btn-lg btn-xl" href="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.0.0/Mosaic-1.0.0-1.dmg">Download Mosaic 1.0.0 preview</a>
-          <span class="cta-note" id="mosaic-download-note">macOS 15+ · Apple silicon<br>Preview: Developer ID signed, not notarized. First open may need System Settings ▸ Privacy &amp; Security ▸ Open Anyway.</span>
+          <a class="btn btn-lg btn-xl mosaic-download-link" href="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.0.0/Mosaic-1.0.0-1.dmg">Download Mosaic 1.0.0 preview</a>
+          <span class="cta-note">macOS 15+ · Apple silicon<br>Preview: Developer ID signed, not notarized. First open may need System Settings ▸ Privacy &amp; Security ▸ Open Anyway.</span>
         </div>
+        <p class="download-count" data-download-count hidden></p>
       </div>
       <figure class="hero-frame">
         <picture>
@@ -257,9 +258,10 @@
   <section class="download" id="download">
     <h2>Keep every thread on one canvas.</h2>
     <div class="cta-row">
-      <a id="mosaic-download-link" class="btn btn-lg btn-xl" href="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.0.0/Mosaic-1.0.0-1.dmg">Download Mosaic 1.0.0 preview</a>
+      <a class="btn btn-lg btn-xl mosaic-download-link" href="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.0.0/Mosaic-1.0.0-1.dmg">Download Mosaic 1.0.0 preview</a>
     </div>
-    <p class="muted" id="mosaic-download-disclaimer" style="margin-top:20px">Preview: Developer ID signed, not notarized. First open may need System Settings ▸ Privacy &amp; Security ▸ Open Anyway. Requires macOS 15+ on Apple silicon. No account, no sync.</p>
+    <p class="download-count" data-download-count hidden></p>
+    <p class="muted" style="margin-top:20px">Preview: Developer ID signed, not notarized. First open may need System Settings ▸ Privacy &amp; Security ▸ Open Anyway. Requires macOS 15+ on Apple silicon. No account, no sync.</p>
   </section>
 
   <footer class="foot">
@@ -268,5 +270,6 @@
       <a href="mailto:lamberthyl@gmail.com?subject=Mosaic%20Feedback">Email feedback · lamberthyl@gmail.com</a>
     </div>
   </footer>
+  <script src="download-stats.js" defer></script>
 </body>
 </html>
