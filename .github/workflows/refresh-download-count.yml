@@ -1,0 +1,57 @@
+name: Refresh download count
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  release:
+    types: [published, edited]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update releases/latest.json downloadCount
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          meta=releases/latest.json
+          version=$(python3 -c 'import json; print(json.load(open("releases/latest.json"))["version"])')
+          url=$(python3 -c 'import json; print(json.load(open("releases/latest.json"))["url"])')
+          asset_name=${url##*/}
+          count=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/v${version}" \
+            --jq ".assets[] | select(.name == \"${asset_name}\") | .download_count")
+          if [ -z "${count}" ]; then
+            echo "No download_count for ${asset_name} on v${version}"
+            exit 1
+          fi
+          python3 - "${count}" <<'PY'
+          import json, pathlib, sys
+          count = int(sys.argv[1])
+          path = pathlib.Path("releases/latest.json")
+          data = json.loads(path.read_text())
+          if data.get("downloadCount") == count:
+            print(f"downloadCount already {count}")
+            sys.exit(0)
+          data["downloadCount"] = count
+          path.write_text(json.dumps(data, indent=2) + "\n")
+          print(f"updated downloadCount -> {count}")
+          PY
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- releases/latest.json; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add releases/latest.json
+          git commit -m "Refresh DMG downloadCount from GitHub Releases"
+          git push
