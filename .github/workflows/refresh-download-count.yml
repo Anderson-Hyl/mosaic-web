@@ -16,19 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Update releases/latest.json downloadCount
+      - name: Update releases/latest.json downloadCount (all DMGs)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           meta=releases/latest.json
-          version=$(python3 -c 'import json; print(json.load(open("releases/latest.json"))["version"])')
-          url=$(python3 -c 'import json; print(json.load(open("releases/latest.json"))["url"])')
-          asset_name=${url##*/}
-          count=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/v${version}" \
-            --jq ".assets[] | select(.name == \"${asset_name}\") | .download_count")
+          # Every published DMG, all versions: a new release must not reset the count.
+          count=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/releases" \
+            --jq '[.[] | select(.draft | not) | .assets[] | select(.name | endswith(".dmg")) | .download_count] | add // 0' \
+            | awk '{ total += $1 } END { print total + 0 }')
           if [ -z "${count}" ]; then
-            echo "No download_count for ${asset_name} on v${version}"
+            echo "No DMG download counts found"
             exit 1
           fi
           python3 - "${count}" <<'PY'
