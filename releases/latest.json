@@ -1,12 +1,12 @@
 {
-  "version": "1.1.0",
-  "build": "2",
+  "version": "1.2.0",
+  "build": "3",
   "minimumSystemVersion": "15.0",
   "architecture": "arm64",
-  "sha256": "d41735853779f9b3abad8bd53d78709388830970e381c0eb2de6859aeacdd6c5",
-  "bytes": 14574032,
-  "sourceCommit": "cbac1aa92ee4c28cd614aaf11d5ffb5c523df1dc",
-  "url": "https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.1.0/Mosaic-1.1.0-2.dmg",
+  "sha256": "921c2e1e0efd2bbb5723e2b5dfec053eda22e9711fd4b03c71595043c050c2bb",
+  "bytes": 14687929,
+  "sourceCommit": "f285d4025332313aa1c17c6be89a610719b184df",
+  "url": "https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.2.0/Mosaic-1.2.0-3.dmg",
   "notarized": false,
   "preview": true,
   "downloadCount": 12
