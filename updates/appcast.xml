@@ -3,15 +3,15 @@
     <channel>
         <title>Mosaic</title>
         <item>
-            <title>1.3.0</title>
-            <pubDate>Thu, 19 Nov 2026 10:11:02 +0800</pubDate>
+            <title>1.3.1</title>
+            <pubDate>Fri, 20 Nov 2026 13:57:03 +0800</pubDate>
             <link>https://anderson-hyl.github.io/mosaic-web/</link>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.3.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <sparkle:releaseNotesLink>https://anderson-hyl.github.io/mosaic-web/updates/Mosaic-1.3.0-4.md</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.3.0/Mosaic-1.3.0-4.dmg" length="14758667" type="application/octet-stream" sparkle:edSignature="sfX0uL99HJDkNMy2pXuVUFswJqADUmXpl8wDUluOzuaEKgifHM34uqxORckhP3PB/DcRD5dVaHaUFgqtToNLAg==" />
+            <sparkle:releaseNotesLink>https://anderson-hyl.github.io/mosaic-web/updates/Mosaic-1.3.1-5.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/Anderson-Hyl/mosaic-web/releases/download/v1.3.1/Mosaic-1.3.1-5.dmg" length="14820217" type="application/octet-stream" sparkle:edSignature="bEOQ1ALkRApth/VjFW3dDNUiQNnYTcVpSD6ABrSbW1FZYwawtkyt7ECI4yqxru6FO2wZxkoZHMjOT+2wMHhcDQ==" />
         </item>
     </channel>
 </rss>
